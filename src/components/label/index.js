@@ -89,7 +89,7 @@ export default class Label extends PureComponent {
       basePadding,
       style,
       errored,
-      active, 
+      active,
       focused,
       animationDuration,
       ...props
@@ -99,7 +99,7 @@ export default class Label extends PureComponent {
       errorColor:
       focus.interpolate({
         inputRange: [-1, 0, 1],
-        outputRange: [errorColor, baseColor, tintColor],
+        outputRange: [errorColor, baseColor, baseColor],
       });
 
     let top = input.interpolate({

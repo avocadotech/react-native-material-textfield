@@ -336,6 +336,7 @@ export default class TextField extends PureComponent {
       disabledLineWidth,
       animationDuration,
       fontSize,
+      fontWeight,
       titleFontSize,
       labelFontSize,
       labelHeight,
@@ -345,6 +346,7 @@ export default class TextField extends PureComponent {
       titleTextStyle,
       tintColor,
       baseColor,
+      borderBaseColor,
       textColor,
       errorColor,
       lineWidth,
@@ -378,7 +380,7 @@ export default class TextField extends PureComponent {
       errorColor:
       focus.interpolate({
         inputRange: [-1, 0, 1],
-        outputRange: [errorColor, baseColor, tintColor],
+        outputRange: [errorColor, borderBaseColor, tintColor],
       });
 
     let borderBottomWidth = restricted?
@@ -403,6 +405,7 @@ export default class TextField extends PureComponent {
 
     let inputStyle = {
       fontSize,
+      fontWeight,
       textAlign,
 
       color: (disabled || defaultVisible)?
